@@ -3,12 +3,17 @@ require "./lib/bookmark"
 class App < Sinatra::Base
 
   get "/" do
-    "Hello, World!"
+    erb :index
+  end
+
+  post "/add_bookmark" do
+    Bookmark.create(url: params[:url])
+    redirect '/bookmarks'
   end
 
   get "/bookmarks" do
     @bookmarks = Bookmark.all
-    erb :index
+    erb :bookmarks
   end
 
   run! if app_file == $0
