@@ -47,6 +47,7 @@ Metrics/LineLength:
     - 'spec/**/*'
     - 'test/**/*'
     - 'Gemfile'
+    - 'coverage/*'
 
 Metrics/BlockLength:
   Exclude:
