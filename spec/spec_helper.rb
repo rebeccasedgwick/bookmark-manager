@@ -4,6 +4,7 @@ require './app'
 require 'capybara/rspec'
 require 'simplecov'
 require 'simplecov-console'
+require 'web_helpers'
 
 Capybara.app = App
 
