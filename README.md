@@ -14,4 +14,4 @@ I would like to add the site's address and title to bookmark manager
 
 Domain Model
 ---
-![Domain Model] (images/domain_model.jpeg)
+![Domain Model](./images/domain_model.jpeg)
