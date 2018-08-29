@@ -14,4 +14,4 @@ I would like to add the site's address and title to bookmark manager
 
 Domain Model
 ---
-![Domain Model] (https://www.dropbox.com/s/7liqm0kg86mslwe/domain-model.jpg?dl=1)
+![Domain Model] (images/domain_model.jpeg)
