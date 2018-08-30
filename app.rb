@@ -1,5 +1,7 @@
 require "sinatra/base"
 require "./lib/bookmark"
+require "sinatra/flash"
+
 class App < Sinatra::Base
 
   get "/" do
