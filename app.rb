@@ -1,11 +1,18 @@
 require "sinatra/base"
 require "./lib/bookmark"
 require "sinatra/flash"
+require "uri"
 
 class App < Sinatra::Base
+  enable :sessions
+  register Sinatra::Flash
 
   get "/" do
     erb :index
+  end
+
+  get "/add" do
+    erb :add
   end
 
   post "/add_bookmark" do

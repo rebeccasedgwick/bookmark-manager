@@ -18,5 +18,4 @@ describe Bookmark do
       expect(Bookmark.all).to include 'http://www.testwebsite.com'
     end
   end
-
 end
