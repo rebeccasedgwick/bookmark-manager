@@ -16,8 +16,8 @@ class App < Sinatra::Base
   end
 
   post "/add_bookmark" do
-    Bookmark.create(url: params[:url])
-    redirect '/bookmarks'
+    flash[:invalid] = "Error: please enter a valid URL" unless Bookmark.create(url: params[:url])
+    redirect "/bookmarks"
   end
 
   get "/bookmarks" do

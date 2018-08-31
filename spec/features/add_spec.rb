@@ -15,4 +15,12 @@ feature "Adding a bookmark" do
     click_button "Save"
     expect(page).to have_content "http://www.google.co.uk"
   end
+
+  scenario "Flash error message if invalid url entered" do
+   visit("/")
+   click_link "add"
+   fill_in "url", with: "For testing: this is not a url"
+   click_button "Save"
+   expect(page).to have_content ("Error: please enter a valid URL")
+ end
 end

@@ -1,6 +1,12 @@
-<% @bookmarks.each do |bookmark| %>
-  <li><%= bookmark %></li>
-<% end %>
+<ul>
+  <% @bookmarks.each do |bookmark| %>
+    <li><%= bookmark %></li>
+  <% end %>
+</ul>
+
+<h3 style="color:red">
+  <%= flash[:invalid] %>
+</h3>
 
 <h5>
   <a href="/add" id="add">Add a new bookmark</a></h4>
