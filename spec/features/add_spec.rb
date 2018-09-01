@@ -23,4 +23,14 @@ feature "Adding a bookmark" do
    click_button "Save"
    expect(page).to have_content ("Error: please enter a valid URL")
  end
+
+ scenario "Bookmark name is added" do
+   visit("/")
+   click_link "add"
+   fill_in "url", with: "http://www.google.co.uk"
+   fill_in "name", with: "Google UK"
+   click_button "Save"
+   expect(page).to have_content "Google UK"
+ end
+
 end
